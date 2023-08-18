@@ -1,0 +1,9 @@
+class Clientdata(models.Model):
+    dob=models.DateField(null=True,blank=True,default=None)
+    gender=models.CharField(max_length=10)
+    address=models.CharField(max_length=50)
+    district=models.CharField(max_length=20)
+    contry=models.CharField(max_length=30)
+    pincode=models.CharField(max_length=8)
+    education=models.CharField(max_length=30)
+    client=models.ForeignKey(Client,on_delete=models.CASCADE)

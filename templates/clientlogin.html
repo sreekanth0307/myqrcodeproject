@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content %}
+   <!-- <link rel="stylesheet" href="{% static 'css/style2.css'%}" />!-->
+   <style>
+    h1{
+      padding-left: 190px;
+      bottom: 100px;
+    }
+    label{
+      padding-left: 90px;
+    }
+    input{
+      margin-left: 90px;
+    }
+    button{
+      left: 105px;
+    }
+   </style>
+    <form action="clientlogin" method="post" >             
+      {% csrf_token %} 
+      <h1>Sign In</h1>  
+      <label>E-mail</label>
+      <input type="text" placeholder="" name="email" />
+      <label>Password</label>
+     <input type="password" placeholder="" name="pwd" />
+     <button type="submit">Login</button>
+   </form>       
+{% endblock %}        
+     
+       

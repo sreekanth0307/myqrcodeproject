@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+   <link rel="stylesheet" href="{% static 'css/style2.css'%}">
+   <form action="clientdata" method="post">
+    {%csrf_token%}
+   <h1>Client Data Entry</h1>
+    <label>Client Name</label>
+    <input type="text" placeholder="" name="clientname" />
+    <label class="page">Address</label>
+    <input type="text" placeholder="address" name="address">
+    <input type="text" placeholder="Country" name="country">
+    <input type="text" placeholder="district" name="district">
+    <input type="text" placeholder="Pin" name="pin">
+    <select name="gender">
+      <option value="">gender</option>
+      <option value="male">male</option>
+      <option value="female">female</option>
+  </select>
+    <!--<label>D O B</label>
+    <input type="date" placeholder="" name="dob"/>!-->
+    <label>Email</label>
+    <input type="email" placeholder="" name="email" />
+    <label>Phone</label>
+    <input type="text" placeholder="" name="phone" />
+    <label>Education</label>
+    <input type="text" name="education">
+    <label>Adhar Number</label>
+    <input type="text" name="adharnumber">
+    <button>ENTER</button>
+   </form> 
+{% endblock %}     

@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content %}
+  <link rel="stylesheet" href="{% static 'css/style2.css'%}" />
+  <head>
+  </head>
+  <div class="bg">
+  <form action="clientsignup" method="POST" enctype="multipart/form-data">             
+    {% csrf_token %} 
+    <h1>Sign Up</h1>
+    <label>Client Name</label>
+    <input type="text" placeholder="" name="clientname"/>
+    <label>Contact Number</label>
+    <input type="text" placeholder="" name="ContactNumber"/>
+    <label>Email</label>
+    <input type="email" placeholder="" name="Email"/>
+    <label>Password</label>
+    <input type="password" placeholder="" name="Pwd"/>
+    <label>Confirm Password</label>
+    <input type="password" placeholder="" name="Pwd1"/>
+    <label>Adhar</label>
+    <input type="text" placeholder="" name="Adhar"/>
+    <label>Upload Photo</label>
+    <input type="file" name="Photo">
+    <button>SUBMIT</button>
+  </form>  
+  </div>
+{% endblock %}  
+
+

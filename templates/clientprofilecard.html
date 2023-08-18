@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+<style>
+    .card{
+        
+       
+        display:inline-block;
+        padding-left: 640px;
+    }
+</style>
+<h2 style="text-align: center;">CLIENT PROFILE CARD</h2>
+<form action="/" enctype="multipart/form-data">
+    {%for i in obj1%}
+    <div class="card">
+        <img src="{{i.photourl}}" alt="" style="width:100%">
+        <h2 class="name">{{i.clientname}}</h2>
+        <p>E-MAIL ID:{{i.email}}</p>
+        <p>CONTACT NO:{{i.contactno}}</p>
+        <p>GENDER:{{obj.gender}}</p>
+        <p>ADDRESS:{{obj.address}}</p>
+        <p>DISTRICT:{{obj.district}}</p>
+        <p>CONTRY:{{obj.contry}}</p>
+        <p>PINCODE:{{obj.pincode}}</p>
+        <p>EDUCATION:{{obj.education}}</p>
+        <p>ADHAR:{{i.adhar}}</p>
+        <div class="pro_logo">
+            <img src="{%static 'img/logo.png'%}" alt="">
+        </div>
+    </div>
+    {%endfor%}
+</form>
+{%endblock%}
+
+
+
+    
+

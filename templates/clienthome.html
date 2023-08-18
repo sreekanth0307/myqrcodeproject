@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+   <link rel="stylesheet" href="{% static 'css/style2.css'%}">
+   <!--<form action="home">!-->
+    <h1 class="data">WELCOME {{client_obj.clientname}}</h1>
+    <button class="btn" onclick="location.href='clientdata';">ENTER</button>
+    <nav>
+      
+  
+    <button class="out"><a href="logoutclient">Logout</a></button>
+   </nav>
+ 
+   <!--</form>!-->
+
+{% endblock %}
